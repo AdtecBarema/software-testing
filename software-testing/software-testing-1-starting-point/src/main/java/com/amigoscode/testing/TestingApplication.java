@@ -1,5 +1,6 @@
 package com.amigoscode.testing;
 
+import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
@@ -8,6 +9,9 @@ public class TestingApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(TestingApplication.class, args);
+		System.out.println ("Test class is ready");
 	}
+
+
 
 }
