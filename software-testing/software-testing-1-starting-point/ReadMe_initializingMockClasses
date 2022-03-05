@@ -1,0 +1,14 @@
+//We can Initialize class to be mocked in two ways:
+1. Static import:
+
+    -Initialize the class to be mocked directly using the static method, mock:
+    e.g: private  CustomerRepository customerRepository2= mock(CustomerRepository.class);
+ 2. @Mock annotation:
+
+    Initialize through @Mock annotation, and initalize all the classes to be mocked within the @BeforeEach block.
+          e.g @BeforeEach
+             void setUp () {
+                 //Initialize all classes with @Mock annotation in this class
+                 MockitoAnnotations.initMocks (this);
+                 underTest= new CustomerRegistrationService ();
+             }
