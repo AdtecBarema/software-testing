@@ -36,8 +36,8 @@ public class PaymentIntegrationTest {
 
         //GIVEN
         UUID customerId = UUID.randomUUID ();
-        Customer customer = new Customer (customerId, "James", "000000");
 
+        Customer customer = new Customer (customerId, "James", "+447000000000");
         //Note that the path should start with / or it should be a complete url, otherwise the test will fail
         //Since we are working on integration test, and the path is not supposed to be a complete url, then it should be preceded by a /
         ResultActions customerRegResultActions = mockMvc.perform (put ("/api/v1/customer-registration")
