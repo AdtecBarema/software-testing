@@ -1,6 +1,5 @@
 package com.amigoscode.testing.customer;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 import javax.persistence.Column;
@@ -10,7 +9,7 @@ import javax.validation.constraints.NotBlank;
 import java.util.UUID;
 
 @Entity
-@JsonIgnoreProperties(value = {"id"},allowGetters = true)
+@JsonIgnoreProperties(allowGetters = true)
 public class Customer {
 
     @Id
@@ -28,7 +27,6 @@ public class Customer {
         this.name = name;
         this.phoneNumber = phoneNumber;
     }
-
 
     public  Customer (){}
 
@@ -64,6 +62,4 @@ public class Customer {
                 ", phoneNumber='" + phoneNumber + '\'' +
                 '}';
     }
-
-
 }
